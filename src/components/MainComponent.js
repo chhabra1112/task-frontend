@@ -22,7 +22,7 @@ class MainComponent extends Component {
 
     isAuthourised = (response) => {
         this.setState({ isAuth: response.isAuth, recruiter: response.recruiter, userId: response.id });
-        fetch('http://localhost:9100/jobs', {
+        fetch(basicUrl+'/jobs', {
             method: 'GET',
             credentials: 'include',
             mode: 'cors'
@@ -45,7 +45,7 @@ class MainComponent extends Component {
             .then(response => response.json())
             .then(response => this.setState({ jobs: response }))
         if (!this.state.recruiter) {
-            fetch('http://localhost:9100/jobs/applied', {
+            fetch(basicUrl+'/jobs/applied', {
                 method: 'GET',
                 credentials: 'include',
                 mode: 'cors'
@@ -76,7 +76,7 @@ class MainComponent extends Component {
     }
 
     isNotAuthourised = () => {
-        fetch('http://localhost:9100/user/logout', {
+        fetch(basicUrl+'/user/logout', {
             method: 'GET',
             credentials: 'include',
             mode: 'cors'
