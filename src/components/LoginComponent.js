@@ -37,7 +37,7 @@ class SignUp extends Component{
     handleSignUp=(e)=>{
         e.preventDefault();
         console.log(this.state);
-        const user = {email:this.state.email,password:this.state.password,recruiter:this.state.recruiter==="Recruiter",username:this.state.name};
+        const user = {email:this.state.email,password:this.state.password,recruiter:this.state.recruiter,username:this.state.name};
         fetch(basicUrl+'/user/register',{
             method: 'POST',
             mode:'cors',
@@ -87,7 +87,7 @@ class SignUp extends Component{
             </Alert>
             :null
     }
-            <Form onSubmit={(e)=>{this.handleSignUp(e)}}>
+            <Form onSubmit={(e)=>{console.log(this.state)}}>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="name" placeholder="Enter Name" 
