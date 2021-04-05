@@ -1,7 +1,6 @@
 import React,{Component, useState} from 'react';
 import {Tabs,Tab, Form, Button, Alert} from 'react-bootstrap';
 import basicUrl from './basicUrl';
-import Cookies from 'universal-cookie';
 
 
 const LoginComponent = (props)=>{
