@@ -18,7 +18,7 @@ const JobsComponent = (props) => {
         job_Id:jobs[i]._id,
         'seekers':[]
       })
-      fetch('http://localhost:9100/jobs/' + jobs[i]._id, {
+      fetch(basicUrl+'/jobs/' + jobs[i]._id, {
         method: 'GET',
         credentials: 'include',
         mode: 'cors'
