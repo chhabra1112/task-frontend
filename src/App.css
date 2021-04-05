@@ -1,0 +1,21 @@
+.App .navbar .navbar-brand a{
+    color: white;
+}
+#auth {
+    height :100vh;
+    padding-top: 15vh;
+}
+
+
+#auth .nav a{
+    font-size:2rem;;
+}
+
+#auth .authbox{
+    width:40vw;
+    margin-left:15vw;
+}
+
+#auth .tab-content{
+    margin-top: 5vh;
+}
