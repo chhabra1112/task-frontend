@@ -87,7 +87,7 @@ class SignUp extends Component{
             </Alert>
             :null
     }
-            <Form onSubmit={(e)=>{console.log(this.state)}}>
+            <Form onSubmit={(e)=>{this.handleSignUp(e)}}>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="name" placeholder="Enter Name" 
