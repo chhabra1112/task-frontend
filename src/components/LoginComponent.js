@@ -29,7 +29,7 @@ class SignUp extends Component{
             name:"",
             email:"",
             password:"",
-            recruiter:"",
+            recruiter:false,
             success:false
         }
         this.handleSignUp.bind(this);
@@ -106,7 +106,6 @@ class SignUp extends Component{
                         value={this.state.password}
                         onChange={e=>this.setState({password:e.target.value})}/>
                     </Form.Group>
-
                     <Form.Group controlId="recruiter">
                         <Form.Check type="checkbox" label="Recruiter" 
                         name="Recruiter"
