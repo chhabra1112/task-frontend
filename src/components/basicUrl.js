@@ -1,2 +1,2 @@
-const basicUrl = "http://localhost:9100";
+const basicUrl = "https://getajob-backend.herokuapp.com/";
 export default basicUrl 
