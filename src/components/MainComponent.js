@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import JobComponent from './JobsComponent';
-import Cookies from 'universal-cookie';
 import HeaderComponent from './HeaderComponent';
 import LoginComponent from './LoginComponent'
 import basicUrl from './basicUrl';
-// import axios from './axios';
 
 class MainComponent extends Component {
     constructor(props) {

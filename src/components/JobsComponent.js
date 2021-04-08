@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import { Card, Button, Modal, ModalBody, Form, FormGroup, Dropdown, DropdownButton } from 'react-bootstrap';
 import basicUrl from './basicUrl';
 
