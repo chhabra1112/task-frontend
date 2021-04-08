@@ -180,12 +180,17 @@ const JobsComponent = (props) => {
   }
 
   const Applications = (props) => {
+    if(props.data[seekers].length>0){
     const print = props.data['seekers'].map(seeker => {
       return (
         <Dropdown.Item id={seeker._id} href="#">{seeker.username}</Dropdown.Item>
       )
-    }
-    )
+    })
+  }
+  else{
+    const print = null
+  }
+    
     return (<DropdownButton id={props.jobId} title="Applications">
       {print}
     </DropdownButton>)
