@@ -78,6 +78,7 @@ const JobsComponent = (props) => {
           })
       e.preventDefault();
       handleClose();
+      props.update()
     }
 
     const [company, setCompany] = useState("")
@@ -92,7 +93,7 @@ const JobsComponent = (props) => {
               :
               <AppliedJobs className="ml-15" data={data} />}
           </div>
-          <RenderMyJobs jobs={jobs} data={data} recruiter={props.user.recruiter} />
+          <RenderMyJobs jobs={jobs} data={data} recruiter={props.user.recruiter} update={props.update} />
         </div>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>Add a Job</Modal.Header>
@@ -153,6 +154,7 @@ const JobsComponent = (props) => {
             throw error;
           })
       e.preventDefault();
+      props.update();
     }
     
     const Jobs = props.jobs.map((job) => {

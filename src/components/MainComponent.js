@@ -114,7 +114,7 @@ class MainComponent extends Component {
                     {!this.state.isAuth ?
                         <LoginComponent isAuthourised={this.isAuthourised} />
                         :
-                        <JobComponent jobs={this.state.jobs} user={{ userId: this.state.userId, recruiter: this.state.recruiter }} data={this.state.data} />
+                        <JobComponent jobs={this.state.jobs} user={{ userId: this.state.userId, recruiter: this.state.recruiter }} data={this.state.data} update={this.componentDidMount}/>
                     }
 
                 </div>
